@@ -11,18 +11,33 @@ body {
 header {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
-    text-align: center;
+    display: flex;
+    justify-content: center;
     padding: 2rem 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-header h1 {
+.brand-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    max-width: 800px;
+    width: 100%;
+}
+
+.brand-logo svg {
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+}
+
+.brand-logo h1 {
     margin: 0;
     font-size: 2.5rem;
     font-weight: 700;
 }
 
-header p {
+.brand-logo p {
     margin: 0.5rem 0 0;
     font-weight: 300;
 }
