@@ -7,10 +7,15 @@ document.getElementById('bookingForm').addEventListener('submit', function(event
     const service = document.getElementById('service').value;
     const date = document.getElementById('date').value;
     const time = document.getElementById('time').value;
+    const message = document.getElementById('message').value;
     
     if (name && email && phone && service && date && time) {
-        alert('Booking submitted successfully! We will contact you soon.');
-        // In a real app, send data to server
+        const subject = encodeURIComponent('Cleaning Booking Request');
+        const body = encodeURIComponent(
+            `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nService: ${service}\nDate: ${date}\nTime: ${time}\nMessage: ${message}`
+        );
+        const mailtoLink = `mailto:success_vault@outlook.com?subject=${subject}&body=${body}`;
+        window.location.href = mailtoLink;
     } else {
         alert('Please fill in all required fields.');
     }
