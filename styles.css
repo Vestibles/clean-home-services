@@ -140,3 +140,19 @@ footer {
     color: white;
     margin-top: 2rem;
 }
+
+.whatsapp-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #25D366;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 700;
+    margin-top: 1rem;
+    transition: background 0.3s;
+}
+
+.whatsapp-button:hover {
+    background: #128C7E;
+}
